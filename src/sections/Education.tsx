@@ -1,0 +1,8 @@
+export default function Education() {
+    return (
+        <div>
+            <h2>Education</h2>
+            {/* Content will go here */}
+        </div>
+    );
+}
