@@ -59,12 +59,7 @@ export const GENERAL_INFO: Array<{ value: string; icon: IconType }> = [
 
 export const ABOUT_ME: string = `
     <p>Hi! I'm Thang, also known as <strong>Akari</strong> — just another web developer trying to build cool things on the internet.</p>
-    <p>I enjoy creating applications and hands-on projects, even if they're not always practical.</p>
-    <p>When I'm not coding, you’ll probably find me gaming, reading, or just hanging out with friends.</p>
-    <p>I love exploring new technologies and picking up new skills. If you want to chat or collaborate on something fun, don't hesitate to reach out!</p>
-    <p style="text-align: right">
-        <small>
-            <em>You won't get anywhere if you only try things you can already do.</em>
-        </small>
-    </p>
+    <p>I enjoy <strong>creating applications</strong> and <strong>hands-on projects</strong>, even if they're not always practical.</p>
+    <p>When I'm not coding, you'll probably find me gaming, reading, or just hanging out with friends.</p>
+    <p>I love exploring <strong>new technologies</strong> and picking up <strong>new skills</strong>. If you want to <strong>chat</strong> or <strong>collaborate</strong/> on something fun, <strong>don't hesitate to reach out!</strong></p>
 `;

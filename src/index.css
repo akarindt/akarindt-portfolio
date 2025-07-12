@@ -4,3 +4,15 @@ body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
 }
+
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 640px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+/* Add a responsive viewport meta tag in your HTML head if not already present */

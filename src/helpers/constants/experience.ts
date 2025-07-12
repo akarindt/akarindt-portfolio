@@ -13,7 +13,7 @@ export const WORK_EXPERIENCE: Array<{
         description: `
         <p>
             Provide IT support and helpdesk services to employees, ensuring smooth operation of IT systems and resolving technical issues promptly.
-            I also develop and maintain existing web applications, enhancing functionality and user experience. eg: <a href="https://www.amante.co.kr/shop/main" target="_blank">Amante</a>
+            I also develop and maintain existing web applications, enhancing functionality and user experience. eg: <u><a href="https://www.amante.co.kr/shop/main" target="_blank">Amante</a></u>
         </p>`,
     },
 ];
