@@ -10,15 +10,14 @@ export default function Header() {
             behavior: "smooth",
         });
     };
-
     const toggleTheme = () => {
         const newTheme = theme === "light" ? "dark" : "light";
         setTheme(newTheme);
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 shadow-md z-50">
-            <div className="px-4 sm:px-6 py-3 flex items-center justify-between">
+        <header className="w-full fixed top-0 left-0 right-0 bg-white dark:bg-gray-900 shadow-md z-50">
+            <div className="container mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
                 <div>
                     <button
                         onClick={toggleTheme}
@@ -32,7 +31,7 @@ export default function Header() {
                         )}
                     </button>
                 </div>
-                <div className="absolute left-1/2 transform -translate-x-1/2">
+                <div className="flex-1 flex justify-center">
                     <button
                         onClick={scrollToTop}
                         className="text-xl font-bold text-blue-950 dark:text-white py-2 px-4 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
@@ -40,7 +39,7 @@ export default function Header() {
                         Akari
                     </button>
                 </div>
-                <div className="w-10"></div>
+                <div className="w-10 flex justify-end"></div>
             </div>
         </header>
     );

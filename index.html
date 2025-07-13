@@ -3,6 +3,48 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Primary Meta Tags -->
+        <title>Akari | Web Developer Portfolio</title>
+        <meta name="title" content="Akari | Web Developer Portfolio" />
+        <meta
+            name="description"
+            content="Portfolio of Nong Duc Thang (Akari), a Web Developer specializing in JavaScript, TypeScript, React, and Node.js from Vietnam."
+        />
+        <meta
+            name="keywords"
+            content="web developer, frontend developer, React developer, TypeScript, JavaScript, Akari, portfolio, Nong Duc Thang, Vietnam"
+        />
+        <meta name="author" content="Nong Duc Thang" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.akari.io.vn/" />
+        <meta property="og:title" content="Akari | Web Developer Portfolio" />
+        <meta
+            property="og:description"
+            content="Portfolio of Nong Duc Thang (Akari), a Web Developer specializing in JavaScript, TypeScript, React, and Node.js from Vietnam."
+        />
+        <meta property="og:image" content="https://avatars.githubusercontent.com/u/78296824?v=4" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.akari.io.vn/" />
+        <meta property="twitter:title" content="Akari | Web Developer Portfolio" />
+        <meta
+            property="twitter:description"
+            content="Portfolio of Nong Duc Thang (Akari), a Web Developer specializing in JavaScript, TypeScript, React, and Node.js from Vietnam."
+        />
+        <meta
+            property="twitter:image"
+            content="https://avatars.githubusercontent.com/u/78296824?v=4"
+        />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://www.akari.io.vn/" />
+
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -10,10 +52,58 @@
             rel="stylesheet"
         />
         <link rel="icon" href="https://avatars.githubusercontent.com/u/78296824?v=4" />
-        <title>Akari | Just another web developer</title>
     </head>
     <body>
         <div id="root"></div>
         <script type="module" src="/src/main.tsx"></script>
+
+        <!-- Structured Data for SEO -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "@id": "https://www.akari.io.vn/#person",
+                "name": "Nong Duc Thang",
+                "alternateName": "Akari",
+                "description": "Web Developer specializing in JavaScript, TypeScript, React, and Node.js",
+                "image": "https://avatars.githubusercontent.com/u/78296824?v=4",
+                "jobTitle": "Web Developer",
+                "birthDate": "2001-03-31",
+                "alumniOf": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Tay Ninh College of Education",
+                    "sameAs": "https://cdsptayninh.edu.vn/"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Tay Ninh",
+                    "addressCountry": "Vietnam"
+                },
+                "sameAs": [
+                    "https://github.com/akarindt",
+                    "https://www.linkedin.com/in/thangnd3103/",
+                    "https://discord.com/users/823036192467058699"
+                ],
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "PyungAn Co., Ltd.",
+                    "sameAs": "https://www.pyungan.co.kr/"
+                },
+                "knowsLanguage": ["Vietnamese", "English"]
+            }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id": "https://www.akari.io.vn/#website",
+                "url": "https://www.akari.io.vn/",
+                "name": "Akari | Web Developer Portfolio",
+                "description": "Portfolio of Nong Duc Thang (Akari), a Web Developer specializing in JavaScript, TypeScript, React, and Node.js from Vietnam.",
+                "author": {
+                    "@id": "https://www.akari.io.vn/#person"
+                }
+            }
+        </script>
     </body>
 </html>

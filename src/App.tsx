@@ -11,32 +11,53 @@ import Footer from "@components/Footer";
 import themeStore from "@stores/themeStore";
 import { useEffect } from "react";
 import GetInTouch from "@sections/GetInTouch";
+import { useDocumentTitle } from "./helpers/hooks/useDocumentTitle";
 
 export default function App() {
     const { theme } = themeStore();
+    const title = useDocumentTitle();
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
     }, [theme]);
 
+    useEffect(() => {
+        document.title = title;
+    }, [title]);
     return (
-        <div className="bg-white dark:bg-gray-900 flex flex-col items-center">
+        <div className="w-full bg-white dark:bg-gray-900 flex flex-col items-center">
             <Header />
-            <div className="w-full max-w-2xl flex flex-col gap-8 sm:gap-10 px-4 sm:px-6 py-6 sm:py-10 mt-16 text-blue-950 dark:text-white">
-                <Main />
-                <AboutMe />
+            <main className="w-full max-w-2xl flex flex-col gap-8 sm:gap-10 px-4 sm:px-6 py-6 sm:py-10 mt-16 text-blue-950 dark:text-white">
+                <section id="home" aria-label="Home">
+                    <Main />
+                </section>
+                <section id="about" aria-label="About me">
+                    <AboutMe />
+                </section>
                 <Divider />
-                <Education />
+                <section id="education" aria-label="Education">
+                    <Education />
+                </section>
                 <Divider />
-                <WorkingExperience />
+                <section id="experience" aria-label="Experience">
+                    <WorkingExperience />
+                </section>
                 <Divider />
-                <PersonalProjects />
+                <section id="projects" aria-label="Projects">
+                    <PersonalProjects />
+                </section>
                 <Divider />
-                <Skills />
+                <section id="skills" aria-label="Skills">
+                    <Skills />
+                </section>
                 <Divider />
-                <Languages />
-                <GetInTouch />
-            </div>
+                <section id="languages" aria-label="Languages">
+                    <Languages />
+                </section>
+                <section id="contact" aria-label="Contact">
+                    <GetInTouch />
+                </section>
+            </main>
             <Footer />
         </div>
     );
