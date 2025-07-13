@@ -1,4 +1,4 @@
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
 
 type ProgressionExperienceProps = {
     duration: string;
@@ -21,36 +21,46 @@ type ProgressionProps = {
 };
 
 export default function Progression(props: ProgressionProps) {
-    const { type, data } = props;    return (
-        <div className="relative flex flex-col pl-6 sm:pl-8 pb-6 sm:pb-8 border-l-2 border-blue-950 ml-3 sm:ml-4">
-            <div className="absolute w-3 h-3 sm:w-4 sm:h-4 rounded-full left-[-0.375rem] sm:left-[-0.5rem] top-[1rem] bg-blue-950"></div>
-            <span className="text-xs sm:text-sm text-gray-600 mb-1">{data.duration}</span>
-            {type === "education" ? (                <div className="mb-2">
-                    <h3 className="text-base sm:text-lg font-medium">{(data as ProgressionEducationProps).degree}</h3>
-                    <a 
+    const { type, data } = props;
+    return (
+        <div className="relative flex flex-col pl-6 sm:pl-8 pb-6 sm:pb-8 border-l-2 border-blue-950 dark:border-blue-500 ml-3 sm:ml-4">
+            <div className="absolute w-3 h-3 sm:w-4 sm:h-4 rounded-full left-[-0.375rem] sm:left-[-0.5rem] top-[1rem] bg-blue-950 dark:bg-blue-500"></div>
+            <span className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-1">
+                {data.duration}
+            </span>
+            {type === "education" ? (
+                <div className="mb-2">
+                    <h3 className="text-base sm:text-lg font-medium dark:text-white">
+                        {(data as ProgressionEducationProps).degree}
+                    </h3>
+                    <a
                         href={(data as ProgressionEducationProps).schoolWebsite}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:underline text-sm sm:text-base"
+                        className="text-primary hover:underline text-sm sm:text-base dark:text-blue-400"
                     >
                         {(data as ProgressionEducationProps).school}
                     </a>
                 </div>
             ) : (
                 <div className="mb-2">
-                    <h3 className="text-base sm:text-lg font-medium">{(data as ProgressionExperienceProps).position}</h3>
-                    <a 
+                    <h3 className="text-base sm:text-lg font-medium dark:text-white">
+                        {(data as ProgressionExperienceProps).position}
+                    </h3>
+                    <a
                         href={(data as ProgressionExperienceProps).companyWebsite}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:underline text-sm sm:text-base"
+                        className="text-primary hover:underline text-sm sm:text-base dark:text-blue-400"
                     >
                         {(data as ProgressionExperienceProps).company}
                     </a>
                 </div>
             )}
             {type === "experience" && (
-                <div className="text-xs sm:text-sm text-gray-700">{parse((data as ProgressionExperienceProps).description)}</div>
+                <div className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+                    {parse((data as ProgressionExperienceProps).description)}
+                </div>
             )}
         </div>
     );

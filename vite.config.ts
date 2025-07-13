@@ -12,6 +12,7 @@ export default defineConfig({
             "@components": resolve(__dirname, "./src/components"),
             "@sections": resolve(__dirname, "./src/sections"),
             "@helpers": resolve(__dirname, "./src/helpers"),
+            "@stores": resolve(__dirname, "./src/stores"),
         },
     },
 });

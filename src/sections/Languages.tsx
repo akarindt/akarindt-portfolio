@@ -3,9 +3,10 @@ import { LANGUAGUES } from "@helpers/constants";
 import { IoLanguage } from "react-icons/io5";
 import { v4 as uuidv4 } from "uuid";
 
-export default function Languages() {    return (
+export default function Languages() {
+    return (
         <div className="w-full flex flex-col gap-4 sm:gap-5">
-            <div className="text-xl sm:text-2xl flex items-center gap-3 sm:gap-5">
+            <div className="text-xl sm:text-2xl flex items-center gap-3 sm:gap-5 dark:text-white">
                 <IoLanguage className="inline-block" />
                 <span>Languages</span>
             </div>

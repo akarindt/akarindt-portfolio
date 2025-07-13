@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+    @apply bg-white text-black dark:bg-gray-900 dark:text-white;
 }
 
 html {
@@ -14,5 +16,3 @@ html {
         font-size: 15px;
     }
 }
-
-/* Add a responsive viewport meta tag in your HTML head if not already present */
